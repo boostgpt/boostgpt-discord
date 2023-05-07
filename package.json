@@ -6,9 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "bot",
+    "chatbot",
+    "AI",
+    "discord",
+    "chatgpt",
+    "boostgpt",
+    "gpt",
+    "AGI"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "boostgpt": "^1.0.8",
     "discord.js": "^14.11.0",

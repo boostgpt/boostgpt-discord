@@ -1,6 +1,6 @@
-# BoostGPT Discord Bot
+# BoostGPT AI Discord Bot
 
-A BoostGPT Discord Bot startup script
+A BoostGPT AI Discord Bot startup script
 
 <a href="https://discord.gg/FPTmDNjA"><img src="https://img.shields.io/discord/1100801013121822770?color=%bbccff&label=Discord" alt="Discord"></a>
 
