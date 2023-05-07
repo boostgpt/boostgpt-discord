@@ -1,0 +1,17 @@
+{
+  "name": "boostgpt-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boostgpt": "^1.0.8",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
+  }
+}
