@@ -7,7 +7,7 @@ BoostGPT Discord is a streamlined and user-friendly startup script that enables 
 
 ## Features
 
-- Can reply direct messages
+- Can reply to direct messages
 
 - Can reply when mentioned in a channel.
 
@@ -81,7 +81,7 @@ Make sure to keep the .env file secure and not share it publicly, as it contains
 
 Run `node index.js` to start your bot. 
 
-We recommend using pm2 process manager to start your bot in production mode. 
+We recommend using the pm2 process manager to start your bot in production mode. 
 
 To do this you have to:
 
