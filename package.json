@@ -1,7 +1,7 @@
 {
   "name": "boostgpt-discord-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "BoostGPT Discord is a streamlined and user-friendly startup script that enables you to set up your own custom Discord bot in a flash.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

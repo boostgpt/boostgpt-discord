@@ -5,8 +5,8 @@ const { Client, GatewayIntentBits, Partials } = require('discord.js');
 
 const client = new Client({
   intents: [
-    // GatewayIntentBits.Guilds, //TODO
-    // GatewayIntentBits.GuildMessages, //TODO : Allow bot to respond to messages in a channel.
+    GatewayIntentBits.Guilds, //TODO
+    GatewayIntentBits.GuildMessages, //TODO : Allow bot to respond to messages in a channel.
     GatewayIntentBits.DirectMessages,
   ],
   partials: [
@@ -53,10 +53,15 @@ client.on('messageCreate', async (message) => {
             }
         }else{
             if (chatbot.response.chat) {
-                if (message.author.id != process.env.DISCORD_BOT_ID) {
-                    message.author.send(chatbot.response.chat.reply).catch(error => {
-                        message.channel.send(error_message)
-                    }) 
+               
+                if (message.mentions.has(client.user)) {
+                    message.reply(chatbot.response.chat.reply);
+                }else{
+                    if (message.author.id != process.env.DISCORD_BOT_ID) {
+                        message.author.send(chatbot.response.chat.reply).catch(error => {
+                            message.channel.send(error_message)
+                        }) 
+                    }
                 }
             }
         }
