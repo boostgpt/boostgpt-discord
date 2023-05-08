@@ -1,6 +1,6 @@
-# BoostGPT AI Discord Bot
+# BoostGPT Discord
 
-A BoostGPT AI Discord Bot startup script
+BoostGPT Discord is a streamlined and user-friendly startup script that enables you to set up your own custom Discord bot in a flash. With its cutting-edge artificial intelligence and powerful functionality, BoostGPT Discord can help you automate tasks, improve workflow, and add an extra layer of fun and interactivity to your Discord server.
 
 <a href="https://discord.gg/FPTmDNjA"><img src="https://img.shields.io/discord/1100801013121822770?color=%bbccff&label=Discord" alt="Discord"></a>
 
