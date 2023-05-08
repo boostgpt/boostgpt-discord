@@ -29,6 +29,7 @@ client.once('ready', () => {
 client.on('messageCreate', async (message) => {
 
     if (message.content && message.author) {
+
         let payload = {
             bot_id: process.env.BOOSTGPT_BOT_ID,//The collection to chat
             openai_key: process.env.OPENAI_API_KEY,
@@ -39,20 +40,27 @@ client.on('messageCreate', async (message) => {
             top: process.env.BOOSTGPT_BOT_TOP, //Optional. The weight of training data used to form a context. Defaults to 10. Recommended settings between : 10 - 15 give better response from the AI.
         }
 
+        let error_message = `Hi ${message.author.username}! ${process.env.ERROR_MESSAGE}`;
+
         let chatbot = await boostgpt.chat(payload);
 
         if (chatbot.err) {
            //Handle boostgpt errors here.
+           if (message.author.id != process.env.DISCORD_BOT_ID) {
+                message.author.send(error_message).catch(error => {
+                    message.channel.send(error_message)
+                }) 
+            }
         }else{
             if (chatbot.response.chat) {
                 if (message.author.id != process.env.DISCORD_BOT_ID) {
                     message.author.send(chatbot.response.chat.reply).catch(error => {
-                        message.channel.send(`Hi ${message.author.username}! ${process.env.ERROR_MESSAGE}`)
+                        message.channel.send(error_message)
                     }) 
                 }
             }
         }
     }
-    
+
 });
 

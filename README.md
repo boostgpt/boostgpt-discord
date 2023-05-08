@@ -41,7 +41,7 @@ To get your bot's ID, go to your bot's settings page on the BoostGPT dashboard a
 
 ## Installation
 
-`git clone git@github.com:boostgpt/boostgpt-discord-bot.git`
+`git clone git@github.com:boostgpt/boostgpt-discord.git`
 
 Run `npm install`
 
@@ -101,4 +101,4 @@ Using pm2 provides a number of benefits, including process management, automatic
 
 ### License
 
-This package is licensed under the [MIT](https://github.com/boostgpt/boostgpt-discord-bot/blob/master/LICENSE).
+This package is licensed under the [MIT](https://github.com/boostgpt/boostgpt-discord/blob/master/LICENSE).
