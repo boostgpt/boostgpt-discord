@@ -5,8 +5,8 @@ const { Client, GatewayIntentBits, Partials } = require('discord.js');
 
 const client = new Client({
   intents: [
-    GatewayIntentBits.Guilds, //TODO
-    GatewayIntentBits.GuildMessages, //TODO : Allow bot to respond to messages in a channel.
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
     GatewayIntentBits.DirectMessages,
   ],
   partials: [
@@ -30,6 +30,12 @@ client.on('messageCreate', async (message) => {
 
     if (message.content && message.author) {
 
+        let channel = message.channel? message.channel : message.author;
+
+        if (message.author.id != process.env.DISCORD_BOT_ID) {
+            startTypingIndicator(channel);
+        }
+
         let payload = {
             bot_id: process.env.BOOSTGPT_BOT_ID,//The collection to chat
             openai_key: process.env.OPENAI_API_KEY,
@@ -46,14 +52,13 @@ client.on('messageCreate', async (message) => {
 
         if (chatbot.err) {
            //Handle boostgpt errors here.
-           if (message.author.id != process.env.DISCORD_BOT_ID) {
+            if (message.author.id != process.env.DISCORD_BOT_ID) {
                 message.author.send(error_message).catch(error => {
                     message.channel.send(error_message)
                 }) 
             }
         }else{
             if (chatbot.response.chat) {
-               
                 if (message.mentions.has(client.user)) {
                     message.reply(chatbot.response.chat.reply);
                 }else{
@@ -68,4 +73,10 @@ client.on('messageCreate', async (message) => {
     }
 
 });
+
+
+const startTypingIndicator = (channel) => {
+  //Start typing indicator
+  channel.sendTyping();
+}
 
