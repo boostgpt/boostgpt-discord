@@ -11,6 +11,8 @@ BoostGPT Discord is a streamlined and user-friendly startup script that enables 
 
 - Can reply when mentioned in a channel.
 
+- Can engage in a conversation.
+
 
 ## Requirements
 
