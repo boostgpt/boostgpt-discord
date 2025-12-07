@@ -25,7 +25,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "boostgpt": "^1.0.8",
+    "boostgpt": "^2.0.0",
     "discord.js": "^14.11.0",
     "dotenv": "^16.0.3"
   }
